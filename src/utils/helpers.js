@@ -52,7 +52,7 @@ export const serchRequestString = (data) => {
 	console.log("serchRequestString data :", data);
 	const baseUrl = "https://randomuser.me/api/";
 
-	const peges = 500;
+	const peges = 700;
 	const nat = data.nat.length ? `&nat=${data.nat.join()}` : "";
 	const gender = data.gender.length ? `&gender=${data.gender}` : "";
 	const serchUrl = `${baseUrl}?results=${peges}${nat}${gender}`;
@@ -72,18 +72,16 @@ export const statisticElementsCounter = (data, type) => {
 	return res;
 };
 export const genderPredominate = (data) => {
-	let obj = statisticElementsCounter(data, "gender")
+	let obj = statisticElementsCounter(data, "gender");
 	let res = null;
 	Object.keys(obj).forEach((i) => {
 		if (!res) {
-			res = i
+			res = i;
+		} else if (obj[res] !== obj[i]) {
+			res = obj[res] > obj[i] ? res : i;
 		}
-		else if(obj[res] !== obj[i]){
-			res = obj[res] > obj[i] ? res: i
-		}
-		 
 	});
-	return res
+	return res;
 };
 export function jsUcfirst(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
