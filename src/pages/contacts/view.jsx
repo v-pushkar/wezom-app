@@ -17,7 +17,7 @@ const View = (props) => {
 	return (
 		<div className={"page page--contacts"}>
 			<div className="site-page-header-ghost-wrapper">
-				<Header />
+				<Header onRefresh={fetchContactsList}/>
 				<SearchForm onSerchData={props.fechedContacts} />
 				{props.contactsList.length ? (
 					<>

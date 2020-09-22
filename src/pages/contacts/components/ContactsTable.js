@@ -81,7 +81,7 @@ const styles = {
 };
 export const ContactsTable = (props) => {
 	const onChange = (pagination, filters, sorter, extra) => {
-		console.log("params", pagination, filters, sorter, extra);
+		
 	};
 	return (
 		<div className="table-wrapper" style={styles}>

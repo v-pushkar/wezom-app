@@ -14,7 +14,7 @@ const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-    console.log("CONTACTS REDUSER :", action)
+    
 	switch (action.type) {
 		case SHOW_LOADER:
 			return { ...state, isLoading: true };

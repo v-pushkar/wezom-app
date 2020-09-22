@@ -18,6 +18,7 @@ const Header = (props) => (
 					<button
 						type="button"
 						className="ant-btn ant-btn-dashed ant-btn-circle ant-btn-icon-only"
+						onClick={props.onRefresh}
 					>
 						<span
 							role="img"
