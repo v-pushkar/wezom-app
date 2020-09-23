@@ -15,6 +15,7 @@ export const toDate = (date) => {
 	const year = bdate.getFullYear();
 	return `${day} ${daydate}/${month}/${year}`;
 };
+
 export const resultTransform = (res, searchFilter) => {
 	const validData = res.map((i) => {
 		return {
@@ -25,11 +26,9 @@ export const resultTransform = (res, searchFilter) => {
 		};
 	});
 	if (!searchFilter) {
-		
 		return validData;
 	}
 	if (!!searchFilter) {
-		
 		return validData.filter((i) =>
 			i.fullname.toLowerCase().includes(searchFilter.toLowerCase())
 		);
@@ -37,7 +36,6 @@ export const resultTransform = (res, searchFilter) => {
 };
 
 export const NationalitesCounter = (data) => {
-	
 	let res = {};
 	data.forEach((i) => {
 		if (res[countryList[i.nat]]) {
@@ -49,14 +47,13 @@ export const NationalitesCounter = (data) => {
 	return res;
 };
 export const serchRequestString = (data) => {
-	
 	const baseUrl = "https://randomuser.me/api/";
 
 	const peges = 700;
 	const nat = data.nat.length ? `&nat=${data.nat.join()}` : "";
 	const gender = data.gender.length ? `&gender=${data.gender}` : "";
 	const serchUrl = `${baseUrl}?results=${peges}${nat}${gender}`;
-	
+
 	return serchUrl;
 };
 export const statisticElementsCounter = (data, type) => {
@@ -68,7 +65,7 @@ export const statisticElementsCounter = (data, type) => {
 			res[i[type]] = 1;
 		}
 	});
-	
+
 	return res;
 };
 export const genderPredominate = (data) => {
