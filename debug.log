@@ -1,0 +1,5 @@
+[0922/160650.086:ERROR:registration_protocol_win.cc(103)] CreateFile: Не удается найти указанный файл. (0x2)
+[0922/160650.219:ERROR:registration_protocol_win.cc(103)] CreateFile: Не удается найти указанный файл. (0x2)
+[0922/160657.377:ERROR:registration_protocol_win.cc(103)] CreateFile: Не удается найти указанный файл. (0x2)
+[0922/164637.515:ERROR:registration_protocol_win.cc(103)] CreateFile: Не удается найти указанный файл. (0x2)
+[0922/164637.531:ERROR:registration_protocol_win.cc(103)] CreateFile: Не удается найти указанный файл. (0x2)
